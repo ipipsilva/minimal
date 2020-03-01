@@ -1,0 +1,8 @@
+
+{%- assign palavras = content | number_of_words -%}
+
+{%- if palavras < 360 -%}
+    {%- assign minutesText = '1 minute to read' -%}
+{%- else -%}
+    {%- assign minutesText = palavras | divided_by: 180 | append: 'minutes to read' -%}
+{%- endif -%}
